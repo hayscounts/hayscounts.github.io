@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Hays Counts</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link href="./dashboard.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-sm navbar-light bg-primary navbar-fixed-top">
+		<div class="container">
+			<p class="navbar-text">Hays CISD COVID Data</p>
+			<ul class="nav navbar-nav navbar-right">
+				<li class="nav-item">
+					<p class="navbar-text">Last Updated: 2021-09-08</p>
+				</li>
+				<li class="nav-item active">
+					<a class="nav-link dropdown-toggle" href="#" id="navbardrop"
+						data-toggle="dropdown">
+						About
+					</a>
+					<div class="dropdown-menu">
+						<p class="dropdown-content">This site is not managed by, nor is it
+							affiliated with Hays CISD</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+		<div class="container-fluid">
+			<h2>Weekly Data</h2>
+			<div class="row">
+				<h4>New Cases</h4>
+				<canvas class="my-2" id="newCombinedChart" width="900" height="380"></canvas>
+			</div>
+			<div class="row">
+				<div class="col-xs-6">
+					<canvas class="my-2" id="newStudentChart" width="900" height="380"></canvas>
+				</div>
+				<div class="col-xs-6">
+					<canvas class="my-2" id="newStaffChart" width="900" height="380"></canvas>
+				</div>
+			</div>
+			<div class="row">
+				<h4>Cumulative Cases</h4>
+				<canvas class="my-2" id="cumulativeChart" width="900" height="380"></canvas>
+			</div>
+			<div class="row">
+				<div class="col-xs-6">
+					<canvas class="my-2" id="cumulativeStudentChart" width="900" height="380"></canvas>
+				</div>
+				<div class="col-xs-6">
+					<canvas class="my-2" id="cumulativeStaffChart" width="900" height="380"></canvas>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-6">
+					<canvas class="my-2" id="HSPieChart" width="900" height="380"></canvas>
+				</div>
+				<div class="col-xs-6">
+					<canvas class="my-2" id="MSPieChart" width="900" height="380"></canvas>
+				</div>
+				<div class="col-xs-6">
+					<canvas class="my-2" id="ESPieChart" width="900" height="380"></canvas>
+				</div>
+			</div>
+	</main>
+
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="scripts/data.js"></script>
+	<script src="scripts/config.js"></script>
+
+	<script>
+		// === include 'setup' then 'config' above ===
+
+		var newCombinedChart = new Chart(
+			document.getElementById('newCombinedChart'),
+			new_combined_config
+		);
+		var newStudentChart = new Chart(
+			document.getElementById('newStudentChart'),
+			new_student_config
+		);
+		var newStaffChart = new Chart(
+			document.getElementById('newStaffChart'),
+			new_staff_config
+		);
+		var cumulativeChart = new Chart(
+			document.getElementById('cumulativeChart'),
+			cumulative_config
+		);
+		var cumulativeStudentChart = new Chart(
+			document.getElementById('cumulativeStudentChart'),
+			cumulative_student_config
+		);
+		var cumulativeStaffChart = new Chart(
+			document.getElementById('cumulativeStaffChart'),
+			cumulative_staff_config
+		);
+		var ESPieChart = new Chart(
+			document.getElementById('ESPieChart'),
+			es_pie_config
+		);
+		var MSPieChart = new Chart(
+			document.getElementById('MSPieChart'),
+			ms_pie_config
+		);
+		var HSPieChart = new Chart(
+			document.getElementById('HSPieChart'),
+			hs_pie_config
+		);
+	</script>
+</body>
