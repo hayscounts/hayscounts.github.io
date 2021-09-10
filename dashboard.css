@@ -33,6 +33,11 @@
   margin: 10px 10px 10px 10px;
 }
 
+.custom-1 {
+    background-color: rgb(49, 167, 14);
+    color: lightcyan;
+}
+
 main {
   padding-top: 90px;
 }

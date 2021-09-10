@@ -73,6 +73,37 @@ const cumulative_staff_data = {
             data: [4.0, 5.0, 5.0, 5.0, 5.0, 8.0, 11.0, 12.0, 17.0, 27.0, 34.0, 40.0, 49.0, 71.0, 84.0, 84.0, 118.0, 130.0, 160.0, 220.0, 230.0, 239.0, 244.0, 244.0, 247.0, 253.0, 258.0, 258.0, 261.0, 263.0, 267.0, 271.0, 272.0, 274.0, 275.0, 277.0, 277.0, 278.0, 278.0, 278.0, 311.0, 324.0, 352.0],
 }]
 }
+const daily_labels = ['2021-09-01', '2021-09-02', '2021-09-03', '2021-09-04', '2021-09-05', '2021-09-06'];
+const new_daily_combined_data = {
+            labels: daily_labels,
+            datasets: [{
+            label: 'Total (Staff+Student) Daily New Cases',
+            backgroundColor: 'rgb(255, 139, 24)',
+            borderColor: 'rgb(255, 139, 24)',
+            fill: true,
+            data: [0.0, 0.0, 0.0, 0.0, 78.0, 86.0],
+}]
+}
+const new_daily_student_data = {
+            labels: daily_labels,
+            datasets: [{
+            label: 'Daily New Student Cases',
+            backgroundColor: 'rgb(255, 139, 24)',
+            borderColor: 'rgb(255, 139, 24)',
+            fill: true,
+            data: [0.0, 0.0, 0.0, 0.0, 73.0, 78.0],
+}]
+}
+const new_daily_staff_data = {
+            labels: daily_labels,
+            datasets: [{
+            label: 'Daily New Staff Cases',
+            backgroundColor: 'rgb(255, 139, 24)',
+            borderColor: 'rgb(255, 139, 24)',
+            fill: true,
+            data: [0.0, 0.0, 0.0, 0.0, 5.0, 8.0],
+}]
+}
 const es_pie_data = {
 	        labels: ['BlancoVistaES', 'BudaES', 'CaminoRealES', 'CarpenterHillES', 'ElmGroveES', 'FuentesES', 'TomGreenES', 'HemphillES', 'KyleES', 'NegleyES', 'PflugerES', 'ScienceHallES', 'TobiasES', 'UhlandES'],
 datasets: [

@@ -26,7 +26,7 @@
 			<p class="navbar-text">Hays CISD COVID Data</p>
 			<ul class="nav navbar-nav navbar-right">
 				<li class="nav-item">
-					<p class="navbar-text">Last Updated: 2021-09-08</p>
+					<p class="navbar-text">Last Updated: 2021-09-09</p>
 				</li>
 				<li class="nav-item active">
 					<a class="nav-link dropdown-toggle" href="#" id="navbardrop"
@@ -43,7 +43,28 @@
 	</nav>
 	<main role="main">
 		<div class="container-fluid">
-			<h2>Weekly Data</h2>
+			<div class="card custom-1">
+				<div class="card-body">
+				<center><h1>Daily Data</h1></center>
+				</div>
+			</div>
+			<div class="col-xl-6">
+				<h4>New Daily Cases</h4>
+				<canvas class="my-2" id="newDailyCombinedChart" width="900" height="380"></canvas>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<canvas class="my-2" id="newDailyStudentChart" width="900" height="380"></canvas>
+				</div>
+				<div class="col-md-6">
+					<canvas class="my-2" id="newDailyStaffChart" width="900" height="380"></canvas>
+				</div>
+			</div>
+			<div class="card custom-1">
+				<div class="card-body">
+				<center><h1>Weekly Data</h1></center>
+				</div>
+			</div>
 			<div class="col-xl-6">
 				<h4>New Cases</h4>
 				<canvas class="my-2" id="newCombinedChart" width="900" height="380"></canvas>
@@ -91,6 +112,18 @@
 	<script>
 		// === include 'setup' then 'config' above ===
 
+		var newDailyCombinedChart = new Chart(
+			document.getElementById('newDailyCombinedChart'),
+			new_daily_combined_config
+		);
+		var newDailyStudentChart = new Chart(
+			document.getElementById('newDailyStudentChart'),
+			new_daily_student_config
+		);
+		var newDailyStaffChart = new Chart(
+			document.getElementById('newDailyStaffChart'),
+			new_daily_staff_config
+		);
 		var newCombinedChart = new Chart(
 			document.getElementById('newCombinedChart'),
 			new_combined_config

@@ -1,17 +1,35 @@
+const new_daily_combined_config = {
+ type: 'bar',
+ data: new_daily_combined_data,
+ options: {}
+};
+
+const new_daily_student_config = {
+ type: 'bar',
+ data: new_daily_student_data,
+ options: {}
+};
+
+const new_daily_staff_config = {
+ type: 'bar',
+ data: new_daily_staff_data,
+ options: {}
+};
+
 const new_combined_config = {
- type: 'line',
+ type: 'bar',
  data: new_combined_data,
  options: {}
 };
 
 const new_student_config = {
- type: 'line',
+ type: 'bar',
  data: new_student_data,
  options: {}
 };
 
 const new_staff_config = {
- type: 'line',
+ type: 'bar',
  data: new_staff_data,
  options: {}
 };
